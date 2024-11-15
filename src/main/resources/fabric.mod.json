@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "waycraft",
+  "version": "${version}",
+  "name": "waycraft",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MPL-2.0",
+  "icon": "assets/waycraft/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.theoparis.waycraft.client.WaycraftClient"
+    ],
+    "main": [
+      "com.theoparis.waycraft.Waycraft"
+    ]
+  },
+  "mixins": [
+    "waycraft.mixins.json",
+    {
+      "config": "waycraft.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
